@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DemoValidatorCustom.Shared.Models
 {
-    internal class StrudentRegistration
+    public class StudentRegistration
     {
         [Required]
         [Display(Name ="First Name")]
@@ -22,6 +22,7 @@ namespace DemoValidatorCustom.Shared.Models
         public string Email { get; set; }
 
         [Required]
+        [UsernameValidation]
         public string Username { get; set; }
 
         [Required]
